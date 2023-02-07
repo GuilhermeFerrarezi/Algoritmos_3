@@ -22,14 +22,14 @@ public class Aluno {
 	}
 	
 	public void Imprime_aluno() {
-		System.out.println(this.nome + " " + this.codmat + " " + this.cpf + " " + this.sexo + " " + this.nota_P1 + " " + this.nota_P2 + " " + this.nota_P3 + "\n");
+		System.out.println(this.nome + ' ' + this.codmat + ' ' + this.cpf + ' ' + this.sexo + ' ' + this.nota_P1 + ' ' + this.nota_P2 + ' ' + this.nota_P3 + "\n");
 	}
 	
 	public void Imprime_sexo() {
 		if (this.sexo == 'M') {
-			System.out.println(this.nome + " " + "Masculino\n");
+			System.out.println(this.nome + ' ' + "Masculino\n");
 		}else if (this.sexo == 'F') {
-			System.out.println(this.nome + " " + "Feminino\n");
+			System.out.println(this.nome + ' ' + "Feminino\n");
 		}
 	}
 	
@@ -67,4 +67,5 @@ public class Aluno {
 	public void Imprime_media() {
 		System.out.println(this.media + "\n");
 	}
+	
 }
