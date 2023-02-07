@@ -1,40 +1,70 @@
 package aula1;
 
-import java.util.Scanner;
+public class Aluno {
 
-public class Teste_aluno {
-
-	public static void main(String[] args) {
-		
-		Scanner entrada = new Scanner(System.in);
-		double nota_p1, nota_p2, nota_p3;
-			
-        	System.out.println("Digite as notas do primeiro aluno: ");
-        	nota_p1 = entrada.nextDouble();
-        	nota_p2 = entrada.nextDouble();
-        	nota_p3 = entrada.nextDouble();
-			
-		Aluno x1 = new Aluno("Paulo", 5515, "800912345-12", 'M', nota_p1, nota_p2, nota_p3);
-			
-		System.out.println("Digite as notas do segundo aluno: ");
-        	nota_p1 = entrada.nextDouble();
-        	nota_p2 = entrada.nextDouble();
-        	nota_p3 = entrada.nextDouble();
-        	
-        	Aluno x2 = new Aluno("Ana", 991239, "500876123-15", 'F', nota_p1, nota_p2, nota_p3);
+	String nome;
+	int codmat;
+	String cpf;
+	char sexo;
+	double nota_P1;
+	double nota_P2;
+	double nota_P3;
+	double media;
 	
-		entrada.close();
-		
-		x1.Imprime_aluno();
-		x1.Imprime_sexo();
-		x1.Media_aluno();
-		x1.Imprime_media();
-		x1.Resultado();
-		
-		x2.Imprime_aluno();
-		x2.Imprime_sexo();
-		x2.Media_aluno();
-		x2.Imprime_media();
-		x2.Resultado();		
+	public Aluno(String nome, int codmat, String cpf, char sexo, double nota_P1,double nota_P2, double nota_P3) {
+		this.nome = nome;
+		this.codmat = codmat;
+		this.cpf = cpf;
+		this.sexo = sexo;
+		this.nota_P1 = nota_P1;
+		this.nota_P2 = nota_P2;
+		this.nota_P3 = nota_P3;
+	}
+	
+	public void Imprime_aluno() {
+		System.out.println(this.nome + " " + this.codmat + " " + this.cpf + " " + this.sexo + " " + this.nota_P1 + " " + this.nota_P2 + " " + this.nota_P3 + "\n");
+	}
+	
+	public void Imprime_sexo() {
+		if (this.sexo == 'M') {
+			System.out.println(this.nome + " " + "Masculino\n");
+		}else if (this.sexo == 'F') {
+			System.out.println(this.nome + " " + "Feminino\n");
+		}
+	}
+	
+	public void Media_aluno() {
+		double maior = 0, maior2 = 0;
+		if (this.nota_P1 >= this.nota_P2 && this.nota_P1 >= this.nota_P3) {
+			maior = this.nota_P1;
+		}
+		if (this.nota_P2 >= this.nota_P3 && this.nota_P2 >= this.nota_P1) {
+			maior = this.nota_P2;
+		}
+		if (this.nota_P3 >= this.nota_P1 && this.nota_P3 >= this.nota_P2) {
+			maior = this.nota_P3;
+		}
+		if ((this.nota_P1 >= this.nota_P2 || this.nota_P1 >= this.nota_P3) && maior != this.nota_P1) {
+			maior2 = this.nota_P1;
+		}
+		if ((this.nota_P2 >= this.nota_P1 || this.nota_P2 >= this.nota_P3) && maior != this.nota_P2) {
+			maior2 = this.nota_P2;
+		}
+		if ((this.nota_P3 >= this.nota_P1 || this.nota_P3 >= this.nota_P2) && maior != this.nota_P3) {
+			maior2 = this.nota_P3;
+		}
+		this.media = (maior + maior2)/2;
+	}
+	
+	public void Resultado() {
+		if (this.media >= 6) {
+			System.out.println("Aprovado\n");
+		}else {
+			System.out.println("Reprovado\n");
+		}
+	}
+	
+	public void Imprime_media() {
+		System.out.println(this.media + "\n");
 	}
 }
