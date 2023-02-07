@@ -11,7 +11,7 @@ public class Aluno {
 	double nota_P3;
 	double media;
 	
-	public Aluno(String nome, int codmat, String cpf, char sexo, double nota_P1,double nota_P2, double nota_P3) {
+	public Aluno(String nome, int codmat, String cpf, char sexo, double nota_P1, double nota_P2, double nota_P3) {
 		this.nome = nome;
 		this.codmat = codmat;
 		this.cpf = cpf;
