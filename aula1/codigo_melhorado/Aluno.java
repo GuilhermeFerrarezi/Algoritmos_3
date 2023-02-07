@@ -24,7 +24,7 @@ public class Aluno {
 	}
 	
 	public void Imprime_aluno() {
-		System.out.println(this.nome + ' ' + this.codmat + ' ' + this.cpf + ' ' + this.sexo + ' ' + this.nota_P1 + ' ' + this.nota_P2 + ' ' + this.nota_P3 + "\n");
+		System.out.println(this.nome + ' ' + this.codmat + ' ' + this.cpf + ' ' + this.sexo + ' ' + this.nota_P1 + ' ' + this.nota_P2 + ' ' + this.nota_P3 + '\n');
 	}
 	
 	public void Imprime_sexo() {
@@ -53,6 +53,6 @@ public class Aluno {
 	}
 	
 	public void Imprime_media() {
-		System.out.println(this.media + "\n");
+		System.out.println(this.media + '\n');
 	}
 }
