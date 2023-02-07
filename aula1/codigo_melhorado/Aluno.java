@@ -34,8 +34,7 @@ public class Aluno {
 	}
 	
 	public void Media_aluno() {
-		double maior = 0;
-		double maior2 = 0;
+		double maior = 0, maior2 = 0;
 		if (this.nota_P1 >= this.nota_P2 && this.nota_P1 >= this.nota_P3) {
 			maior = this.nota_P1;
 		}
