@@ -38,12 +38,15 @@ public class Aluno {
 		double maior2 = 0;
 		if (this.nota_P1 >= this.nota_P2 && this.nota_P1 >= this.nota_P3) {
 			maior = this.nota_P1;
+			maior2 = this.nota_P1;
 		}
 		if (this.nota_P2 >= this.nota_P3 && this.nota_P2 >= this.nota_P1) {
 			maior = this.nota_P2;
+			maior2 = this.nota_P2;
 		}
 		if (this.nota_P3 >= this.nota_P1 && this.nota_P3 >= this.nota_P2) {
 			maior = this.nota_P3;
+			maior2 = this.nota_P3;
 		}
 		if ((this.nota_P1 >= this.nota_P2 || this.nota_P1 >= this.nota_P3) && maior != this.nota_P1) {
 			maior2 = this.nota_P1;
