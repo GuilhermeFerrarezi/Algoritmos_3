@@ -9,19 +9,19 @@ public class Teste_aluno {
 		Scanner entrada = new Scanner(System.in);
 		double nota_p1, nota_p2, nota_p3;
 		
-    System.out.println("Digite as notas do primeiro aluno: ");
-    nota_p1 = entrada.nextDouble();
-    nota_p2 = entrada.nextDouble();
-    nota_p3 = entrada.nextDouble();
+		System.out.println("Digite as notas do primeiro aluno: ");
+		nota_p1 = entrada.nextDouble();
+		nota_p2 = entrada.nextDouble();
+		nota_p3 = entrada.nextDouble();
 		
 		Aluno x1 = new Aluno("Paulo", 5515, "800912345-12", 'M', nota_p1, nota_p2, nota_p3);
 		
 		System.out.println("Digite as notas do segundo aluno: ");
-    nota_p1 = entrada.nextDouble();
-    nota_p2 = entrada.nextDouble();
-    nota_p3 = entrada.nextDouble();
+		nota_p1 = entrada.nextDouble();
+		nota_p2 = entrada.nextDouble();
+		nota_p3 = entrada.nextDouble();
         
-    Aluno x2 = new Aluno("Ana", 991239, "500876123-15", 'F', nota_p1, nota_p2, nota_p3);
+    		Aluno x2 = new Aluno("Ana", 991239, "500876123-15", 'F', nota_p1, nota_p2, nota_p3);
         
 		entrada.close();
 		
