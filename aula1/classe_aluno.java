@@ -1,7 +1,5 @@
 package aula1;
 
-import java.util.Arrays;
-
 public class Aluno {
 
 	String nome;
@@ -36,12 +34,27 @@ public class Aluno {
 	}
 	
 	public void Media_aluno() {
-		double[] notas = new double[3];
-		notas[0] = this.nota_P1;
-		notas[1] = this.nota_P2;
-		notas[2] = this.nota_P3;
-		Arrays.sort(notas);
-		this.media = (notas[1] + notas[2]) / 2;
+		double maior = 0;
+		double maior2 = 0;
+		if (this.nota_P1 >= this.nota_P2 && this.nota_P1 >= this.nota_P3) {
+			maior = this.nota_P1;
+		}
+		if (this.nota_P2 >= this.nota_P3 && this.nota_P2 >= this.nota_P1) {
+			maior = this.nota_P2;
+		}
+		if (this.nota_P3 >= this.nota_P1 && this.nota_P3 >= this.nota_P2) {
+			maior = this.nota_P3;
+		}
+		if ((this.nota_P1 >= this.nota_P2 || this.nota_P1 >= this.nota_P3) && maior != this.nota_P1) {
+			maior2 = this.nota_P1;
+		}
+		if ((this.nota_P2 >= this.nota_P1 || this.nota_P2 >= this.nota_P3) && maior != this.nota_P2) {
+			maior2 = this.nota_P2;
+		}
+		if ((this.nota_P3 >= this.nota_P1 || this.nota_P3 >= this.nota_P2) && maior != this.nota_P3) {
+			maior2 = this.nota_P3;
+		}
+		this.media = (maior + maior2)/2;
 	}
 	
 	public void Resultado() {
