@@ -67,5 +67,4 @@ public class Aluno {
 	public void Imprime_media() {
 		System.out.println(this.media + "\n");
 	}
-	
 }
