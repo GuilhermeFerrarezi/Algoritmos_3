@@ -23,7 +23,7 @@ public class Aluno {
 		this.nota_P2 = nota_P2;
 		this.nota_P3 = nota_P3;
 	}
-	
+
 	public Aluno(String nome, int codmat, String cpf, char sexo) {
 		this.nome = nome;
 		this.codmat = codmat;
@@ -49,7 +49,7 @@ public class Aluno {
 		notas[1] = this.nota_P2;
 		notas[2] = this.nota_P3;
 		Arrays.sort(notas);
-		this.media = (notas[1] + notas[2]) / 2;
+		this.media = (notas[notas.length-2] + notas[notas.length-1]) / 2;
 	}
 
 	public void Resultado() {
