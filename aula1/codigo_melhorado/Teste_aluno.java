@@ -16,7 +16,7 @@ public class Teste_aluno {
 		
 		for (Aluno aluno: x1) {
 			i++;
-			System.out.println("Digite as notas do " + i +"º  aluno:");
+			System.out.println("Digite as notas do " + i + "º  aluno:");
 	       		aluno.nota_P1 = entrada.nextDouble();
 	        	aluno.nota_P2 = entrada.nextDouble();
 	        	aluno.nota_P3 = entrada.nextDouble();
