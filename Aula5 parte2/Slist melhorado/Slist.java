@@ -17,14 +17,14 @@ public class Slist {
 	}
 	
 	public void Insere_Node_Inicio(int item) {
-		Node x  = new Node(item);
+		Node x = new Node(item);
 		x.next = this.head;
 		this.head = x;
 		this.size++;
 	}
 	
 	public void Insere_Node_Inicio() {
-		Node x  = new Node();
+		Node x = new Node();
 		x.next = this.head;
 		this.head = x;
 		this.size++;
