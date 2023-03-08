@@ -26,8 +26,8 @@ public class Main {
         }
         entrada.close();
         System.out.println("MUITO OBRIGADO");
-		System.out.printf("Alcool: %d\n", qtd_alcool);
-		System.out.printf("Gasolina: %d\n", qtd_gasolina);
-		System.out.printf("Diesel: %d\n", qtd_diesel);
+	System.out.printf("Alcool: %d\n", qtd_alcool);
+	System.out.printf("Gasolina: %d\n", qtd_gasolina);
+	System.out.printf("Diesel: %d\n", qtd_diesel);
     }
 }
