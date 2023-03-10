@@ -92,6 +92,7 @@ public class Slist {
 		for(int count = 1;no_trab != null; count++) {
 			if(count == idx) {
 				System.out.print(" " + no_trab.item);
+				break;
 			}
 			no_trab = no_trab.next;
 		}
