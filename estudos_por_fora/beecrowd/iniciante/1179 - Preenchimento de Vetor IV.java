@@ -25,7 +25,8 @@ public class Main {
         		for (int j = 0; j < par.length; j++) {
         			System.out.printf("par[%d] = %d\n", j, par[j]);
         		}
-        	} else if (countImpar == 5) {
+        	}
+        	if (countImpar == 5) {
         		countImpar = 0;
         		for (int j = 0; j < impar.length; j++) {
         			System.out.printf("impar[%d] = %d\n", j, impar[j]);
