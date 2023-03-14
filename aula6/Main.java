@@ -5,6 +5,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		DList x = new DList(12);
+		DListNode[] a;
 		x.insereInicio(41);
 		x.insereFim(53);
 		x.insereInicio(535);
@@ -39,7 +40,7 @@ public class Main {
 		System.out.println("");
 		System.out.println(x.MediaLista());
 		System.out.println("");
-		DListNode[] a = x.GeraArray();
+		a = x.GeraArray();
 		for(int i = 0; i < a.length; i++) {
 			System.out.println(a[i].item);
 		}
