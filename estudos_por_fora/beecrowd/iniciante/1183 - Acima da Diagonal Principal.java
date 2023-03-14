@@ -20,7 +20,7 @@ public class Main {
                 }
             }
         }
-        
+        entrada.close();
         if(o == 'S'){
             System.out.printf("%.1f\n", sum);
         }else if(o == 'M'){
