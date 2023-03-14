@@ -88,8 +88,12 @@ public class DList {
 		}
 	}
 	
-	public DListNode RetornaSegundoItem() {
-		return this.head.next;
+	public Integer RetornaSegundoItem() {
+		if(this.size < 2) {
+			return null;
+		}else {
+			return this.head.next.item;
+		}
 	}
 	
 	public DListNode[] GeraArray() {
