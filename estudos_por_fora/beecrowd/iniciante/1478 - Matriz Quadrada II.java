@@ -9,19 +9,32 @@ public class Main {
     	int n = entrada.nextInt();
     	int x;
     	while (n != 0) {
+    		String linha = "";
     		for (int i = 1; i <= n; i++) {
     			x = i;
     			for (int j = 1; j <= n; j++) {
     				if (i == j) {
     					x = 1;
     				}
-    				
-                    System.out.printf("%3d", x);
                     if (j < n) {
-                    	System.out.print(" ");
-                    }
-                    else{
-                    	System.out.print("\n");
+                    	if(x < 10) {
+                    		linha += "  " + x;
+                    	}else if(x >= 10 && x < 99) {
+                    		linha += " " + x;
+                    	}else {
+                    		linha += x;
+                    	}
+                     linha +=" ";
+                    }else{
+                    	if(x < 10) {
+                    		linha += "  " + x;
+                    	}else if(x >= 10 && x < 99) {
+                    		linha += " " + x;
+                    	}else {
+                    		linha += x;
+                    	}
+                    	System.out.println(linha);
+                    	linha = "";
                     }
                     
     				if (j >= i) {
@@ -31,7 +44,7 @@ public class Main {
     				}
     			}
     		}
-    		System.out.printf("\n");
+    		System.out.println();
     		n = entrada.nextInt();
     	}
     	entrada.close();
