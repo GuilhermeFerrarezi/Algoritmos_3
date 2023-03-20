@@ -6,27 +6,27 @@ public class Main {
     public static void main(String[] args) throws IOException {
         
     Scanner entrada = new Scanner(System.in);
-    int st = entrada.nextInt();
-    int sm = entrada.nextInt();
-    int et = entrada.nextInt();
-    int em = entrada.nextInt();
+    int hi = entrada.nextInt();
+    int mi = entrada.nextInt();
+    int hf = entrada.nextInt();
+    int mf = entrada.nextInt();
     entrada.close();
-    int rt = et - st;
-    if (rt < 0) {
-    	rt = 24 + (et - st);
+    int dh = hf - hi;
+    if (dh < 0) {
+    	dh += 24;
     }
-    int rm = em - sm;
-    if(rm < 0) {
-    	rm = 60 + (em - sm);
-    	rt--;
+    int dm = mf - mi;
+    if(dm < 0) {
+    	dm += 60;
+    	dh--;
     }
-    if (et == st && em == sm) {
+    if (hf == hi && mf == mi) {
     	System.out.println("O JOGO DUROU 24 HORA(S) E 0 MINUTO(S)");
     }else {
-    	if (rt < 0) {
-    		rt += 24;
+    	if (dh < 0) {
+    		dh += 24;
     	}
-    	System.out.printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", rt, rm);
+    	System.out.printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", dh, dm);
     }
   }
 }
