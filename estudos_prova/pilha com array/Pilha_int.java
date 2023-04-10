@@ -11,7 +11,7 @@ public class Pilha_int {
 	}
 	
 	public void push(int item) {
-		if(this.topo >= pilha.length - 1) {
+		if(this.topo >= this.pilha.length - 1) {
 			System.out.println("Stack overflow");
 			return;
 		}else {
