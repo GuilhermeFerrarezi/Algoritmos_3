@@ -3,7 +3,7 @@ package tarefa_t2;
 public class pilha {
 	
 	int size;
-	Node head; 
+	Node head;
 	Node tail;
 	
 	public pilha() {
@@ -48,7 +48,7 @@ public class pilha {
 		pilha p2 = new pilha();
 		Node no_trab = this.head;
 		Node no_trab2;
-		boolean erro = false;
+		int p1_size;
 		if(this.size == 0) {
 			return false;
 		}
@@ -56,24 +56,22 @@ public class pilha {
 			p1.push(no_trab.item);
 			no_trab = no_trab.next;
 		}
-		for(int i = 0; i < p1.size; i++) {
+		p1_size = p1.size;
+		for(int i = 0; i < p1_size; i++) {
 			p2.push(p1.pop());
 		}
 		no_trab = this.head;
 		no_trab2 = p2.head;
 		for(int i = 0; i < this.size; i++) {
 			if(no_trab.item == no_trab2.item) {
+				no_trab = no_trab.next;
+				no_trab2 = no_trab2.next;
 				continue;
 			}else {
-				erro = true;
-				break;
+				return false;
 			}
 		}
-		if(erro) {
-			return false;
-		}else {
-			return true;
-		}
+		return true;
 	}
 	
 	public void imprime_pilha() {
